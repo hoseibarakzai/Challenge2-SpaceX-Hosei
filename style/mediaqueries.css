@@ -1,0 +1,126 @@
+/*Media Queries*/
+/*Smartphone L*/
+@media screen and (min-width: 425px){
+	main{
+		min-height: 70vh;
+	}
+	.moon{
+		left: 30%;
+	}
+	#clock{
+		margin-top: 25%;
+	}
+	.sun{
+		left: 32%;
+	}
+	@keyframes sunAnimation{
+		0%{
+			left: -30%;
+			top: 15%;
+		}
+		100%{
+			left: 32%;
+		}
+	}
+	#copyright{
+		font-size: 14px;
+	}
+}
+/*Tablet*/
+@media screen and (min-width: 720px){
+	main{
+		min-height: 70vh;
+	}
+	.moon{
+		left: 3%;
+		top: 3%;
+	}
+	@keyframes moonAnimation{
+		0%{
+			top: -25%;
+		}
+		100%{
+			top: 3%;
+		}
+	}
+	.sun{
+		left: 3%;
+		top: 3%;
+	}
+	@keyframes sunAnimation{
+		0%{
+			left: -30%;
+			top: 35%;
+		}
+	}
+	#clock{
+		font-size: 75px;
+		margin-top: 8%;
+	}
+	#copyright{
+		font-size: 16px;
+	}
+	#logotop{
+		display: inherit;
+		height: 20px;
+		width: 162px;
+	}
+	#logobottom{
+		display: none;
+	}
+	#displayDate{
+		font-size: 30px;
+		justify-content: flex-end;
+	}
+	.date{
+		margin-top: 15%;
+		margin-right: 2em;
+	}
+	.city{
+		font-size: 16px;
+		margin: 4em;
+		padding: 1em;
+		border: solid black 1.5px;
+	}
+	#copyright{
+		font-size: 18px;
+	}
+}
+/*Laptop*/
+@media screen and (min-width: 1024px){
+	#logotop{
+		height: 30px;
+		width: 220px;
+	}
+	#clock{
+		font-size: 85px;
+		margin-top: 4%;
+	}
+	.date{
+		margin-top: 5%;
+	}
+	#displayDate{
+		font-size: 30px;
+		justify-content: center;
+	}
+	.city{
+		font-size: 22px;
+		font-weight: bold;
+		padding: 0.5em;
+		margin: 0 4em 0 4em;
+		border: solid black 2px;
+	}
+	#copyright{
+		font-size: 22px;
+	}
+}
+/*Laptop L*/
+@media screen and (min-width: 1440px){
+	.city{
+		margin: 0 7em 0 7em;
+		border: solid black 3px;
+	}
+	#clock{
+		font-size: 100px;
+	}
+}

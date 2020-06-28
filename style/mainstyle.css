@@ -1,0 +1,185 @@
+html{
+	background-image: linear-gradient(to bottom, #FAF185, #FFBB00, #FB753D, #CD7AD3);
+	background-repeat: no-repeat;
+	height: 100%;
+	background-attachment: fixed; /*achtergrond voor de hele pagina, ook met scroll*/
+	font-family: verdana;
+	margin: 0;
+}
+.logo-img{
+	display: flex;
+	justify-content: center;
+}
+#logotop, #logobottom{
+	height: 18px;
+	width: 150px;
+}
+#logotop{
+	display: none;
+}
+#logobottom{
+	align-self: center;
+}
+footer{
+	display: flex;
+	flex-direction: column;
+	font-size: 8pt;
+}
+#copyright{
+	align-self: center;
+	font-family: Segoe Ui regular, sans-serif;
+	font-size: 12px;
+}
+/*background cloud animation*/
+/*z-index achtergrond / voorgrond*/
+section{
+	z-index: -10;
+	position: relative;
+}
+main{
+	z-index: 10;
+	min-height: 65vh;
+}
+.cloud-item{
+	position: fixed;
+	top: 5%;
+	left: -200px;
+	height: auto;
+	width: 500px;
+	animation: cloudAnimation 20s linear infinite;
+}
+.cloud{
+	width: 30%;
+	height: 30%;
+}
+@keyframes cloudAnimation{
+	0%{
+		left: -200px;
+	}
+	100%{
+		left: 100%;
+	}
+}
+#cloud1, #cloud2, #cloud3{
+	max-width: 70%;
+	max-height: 70%; 
+}
+#cloud1-1, #cloud2-1, #cloud3-1{
+	animation-delay: 7s;
+	top: 30%;
+}
+#cloud1-2, #cloud2-2, #cloud3-2{
+	animation-delay: 18s;
+	animation-duration: 15s;
+	top: 20%;
+	max-width: 90%;
+	max-height: 80%;
+}
+/*Einde background cloud animation*/
+/*notificatie ochtend (1) + nacht (2)*/
+.notification1{
+	background: rgba(254, 251, 158, 0.77);
+	width: 100%;
+	height: 3.1em;
+	border-radius: 12px;
+	border: solid #FFFFFF 2px;
+	display: flex;
+	justify-content: center;
+	font-family: arial black;
+	font-size: 1em;
+	color: black;
+	animation: notifAnimation 3s ease-out;
+}
+.notification2{
+	background: rgba(1, 7, 154, 0.59);
+	width: 100%;
+	height: 3.1em;
+	border-radius: 12px;
+	border: solid #FFFFFF 2px;
+	display: flex;
+	color: #FFFFFF;
+	font-family: arial;
+	justify-content: center;
+	font-size: 1em;
+	animation: notifAnimation 3s ease-out;
+}
+@keyframes notifAnimation{
+	0%{
+		transform: translateY(500px);
+	}
+	100%{
+		transform: translateY(0px);
+	}
+}
+/*Display klok en datum*/
+#clock{
+	display: flex;
+	justify-content: center;
+	font-size: 50px;
+	color: #FFFFFF;
+	font-family: segoe ui regular, sans-serif;
+	margin-top: 30%;
+}
+/*Background maan en zon*/
+#moon {
+	width: 155px;
+    height: 165px;
+    background-repeat: no-repeat;
+    align-self: center;
+}
+.moon{
+	position: absolute;
+	z-index: -5;
+	top: 10%;
+	left: 25%;
+	animation: moonAnimation 5s ease-out 1;
+}
+@keyframes moonAnimation{
+	0%{
+		top: -25%;	
+	}
+	100%{
+		top: 10%;
+	}
+}
+#sun {
+	width: 234px;
+    height: 176px;
+    background-repeat: no-repeat;
+    align-self: center;
+}
+.sun{
+	position: absolute;
+	z-index: -5;
+	top: 10%;
+	left: 25%;
+	animation: sunAnimation 5s ease-out 1;
+}
+@keyframes sunAnimation{
+	0%{
+		left: 0%;
+		top: 15%;
+	}
+	100%{
+		left: 25%;
+	}
+}
+#displayDate{
+	display: flex;
+	justify-content: center;
+	font-size: 16px;
+}
+.date{
+	margin-top: 20%;
+}
+/*city style*/
+.city{
+	background-color: #FFFFFF;
+	border: solid black 1px;
+	max-width: 100%;
+	max-height: 50px;
+	margin: 2em;
+	padding: 0.5em;
+	display: flex;
+	justify-content: center;
+}
